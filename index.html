@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <header> <!--Pomodoro, short break, long break buttons-->
+            <nav id="modes" role="tablist" aria-label="Timer Modes">
+                <button role="tab" id="pomodoro-tab" data-mode="pomodoro">Pomodoro</button>
+                <button role="tab" id="shortbreak-tab" data-mode="shortbreak">Short Break</button>
+                <button role="tab" id="longbreak-tab" data-mode="longbreak">Long Break</button>
+            </nav>
+        </header>
+
+        <main> 
+            <section> <!--Main timer-->
+                <div id="timeDisplay">30:00</div>
+                <div id="modeHint">Pomodoro</div>
+            </section>
+
+            <section>
+                <button id="StartPauseButton">Start</button>
+            </section>
+
+            <section> <!--Task input box-->
+                <h2 id="task-heading">Task for this pomodoro</h2>
+                <label for="task-input">What do you plan on completing this session?</label>
+                <input id="task-input" type="text" placeholder="e.g., Outline report for section 2"/>
+            </section>
+
+            <section id="settings"> <!--Settings-->
+                <h2 id="settingsheading">Settings</h2>
+                <form id="settingsform">
+                        <div>
+                            <label for="pomodoro-duration">Pomodoro (minutes)</label>
+                            <input id="pomodoro-duration" name="Pomodoro Time" type="number" min="1" max="300" value="30" />
+                        </div>
+
+                        <div>
+                            <label for="short-duration">Short Break (minutes)</label>
+                            <input id="short-duration" name="Short Break Time" type="number" min="1" max="300" value="5" />
+                        </div>
+
+                        <div>
+                            <label for="long-duration">Long Break (minutes)</label>
+                            <input id="long-duration" name="Long Break Time" type="number" min="1" max="300" value="15" />
+                        </div>
+
+                        <button id="SaveSettings" type="button">Save Settings</button>
+                </form> 
+            </section>
+        </main>
+
+        <dialog id="taskPrompt">
+            <h3 id="promptTitle">Pomodoro finished</h3>
+            <p id="summary">Task: <span id="summaryText">x</span></p>
+            <p>Did you finish your task?</p>
+
+            <div>
+                <button id="buttonFinished" value="finished">Yes! Complete</button>
+
+                <button id="buttonExtend" value="extend">No, add 5 minutes and continue</button>
+                <button id="buttonBreak" value="break">No, skip to break</button>
+            </div>
+        </dialog>
+    </body>
+</html>
