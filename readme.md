@@ -9,14 +9,13 @@ https://fiwiks.github.io/PomodoroTimer/
 ## Features
 - Pomodoro / Short Break / Long Break modes
 - Start / Pause / Reset
-- 
 - Mobile-friendly layout
 
 ## Screenshot
 ![Screenshot](PomodoroScreenshot.png)
 
 ## Tech
-Vanilla HTML, CSS, and JS—no frameworks.
+Vanilla HTML, CSS, and JS-no frameworks.
 
 ## Getting Started
 Open `index.html` locally or use the live demo. 
