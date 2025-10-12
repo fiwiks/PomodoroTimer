@@ -13,7 +13,7 @@ https://fiwiks.github.io/PomodoroTimer/
 - Mobile-friendly layout
 
 ## Screenshot
-![Screenshot](screenshot.png)
+![Screenshot](PomodoroScreenshot.png)
 
 ## Tech
 Vanilla HTML, CSS, and JS—no frameworks.
