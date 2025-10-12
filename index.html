@@ -1,55 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="stylesheet" href="styles.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
     </head>
 
-    <body>
-        <header> <!--Pomodoro, short break, long break buttons-->
-            <nav id="modes" role="tablist" aria-label="Timer Modes">
-                <button role="tab" id="pomodoro-tab" data-mode="pomodoro">Pomodoro</button>
-                <button role="tab" id="shortbreak-tab" data-mode="shortbreak">Short Break</button>
-                <button role="tab" id="longbreak-tab" data-mode="longbreak">Long Break</button>
+    <body class="app">
+        <header class="header"> <!--Pomodoro, short break, long break buttons-->
+            <nav class="tabs" id="modes" role="tablist" aria-label="Timer Modes">
+                <button role="tab" id="pomodoro-tab" data-mode="pomodoro" class="tab">Pomodoro</button>
+                <button role="tab" id="shortbreak-tab" data-mode="shortbreak" class="tab">Short Break</button>
+                <button role="tab" id="longbreak-tab" data-mode="longbreak" class="tab">Long Break</button>
             </nav>
         </header>
 
-        <main> 
-            <section> <!--Main timer-->
+        <main class="main"> 
+            <section class="timer"> <!--Main timer-->
                 <div id="timeDisplay">30:00</div>
                 <div id="modeHint">Pomodoro</div>
             </section>
 
-            <section>
-                <button id="StartPauseButton">Start</button>
+            <section class="controls">
+                <button id="StartPauseButton" class="btn startbtn">Start</button>
             </section>
 
-            <section> <!--Task input box-->
-                <h2 id="task-heading">Task for this pomodoro</h2>
-                <label for="task-input">What do you plan on completing this session?</label>
-                <input id="task-input" type="text" placeholder="e.g., Outline report for section 2"/>
+            <section class="task"> <!--Task input box-->
+                <h2 id="task-heading" class="sectiontitle">Task for this pomodoro</h2>
+                <label for="task-input" class="label">What do you plan on completing this session?</label>
+                <input id="task-input" class="input" type="text" placeholder="e.g., Outline report for section 2"/>
             </section>
 
             <section id="settings"> <!--Settings-->
-                <h2 id="settingsheading">Settings</h2>
+                <h2 id="settingsheading" class="sectiontitle">Settings</h2>
                 <form id="settingsform">
-                        <div>
-                            <label for="pomodoro-duration">Pomodoro (minutes)</label>
-                            <input id="pomodoro-duration" name="Pomodoro Time" type="number" min="1" max="300" value="30" />
+                        <div class="settingoption">
+                            <label for="pomodoro-duration" class="label">Pomodoro (minutes)</label>
+                            <input id="pomodoro-duration" class="input" name="Pomodoro Time" type="number" min="1" max="300" value="30" />
                         </div>
 
-                        <div>
-                            <label for="short-duration">Short Break (minutes)</label>
-                            <input id="short-duration" name="Short Break Time" type="number" min="1" max="300" value="5" />
+                        <div class="settingoption">
+                            <label for="short-duration" class="label">Short Break (minutes)</label>
+                            <input id="short-duration" class="input" name="Short Break Time" type="number" min="1" max="300" value="5" />
                         </div>
 
-                        <div>
-                            <label for="long-duration">Long Break (minutes)</label>
-                            <input id="long-duration" name="Long Break Time" type="number" min="1" max="300" value="15" />
+                        <div class="settingoption">
+                            <label for="long-duration" class="label">Long Break (minutes)</label>
+                            <input id="long-duration" class="input" name="Long Break Time" type="number" min="1" max="300" value="15" />
                         </div>
 
-                        <button id="SaveSettings" type="button">Save Settings</button>
+                        <div class="savecontainer">
+                            <button id="SaveSettings" type="button" class="btn">Save Settings</button>
+                        </div>
                 </form> 
             </section>
         </main>

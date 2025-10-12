@@ -1,0 +1,176 @@
+*{ box-sizing: border-box; }
+
+:root {
+    --bg:#0b0c10;
+    --card:#121317;
+    --muted:#2c2f3a;
+    --text:#e7e9ee;
+    --sub:#a6adbb;
+    --accent:#ffffff;
+    --accent-text:#0b0c10;
+    --ring:#ffffff;
+}
+
+html,body {
+    height: 100%;
+}
+
+.app {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    display: grid;
+    place-items: start center;
+}
+
+.header {
+    width: min(600px, 90%);
+    margin: 24px 16px 8px;
+    display: flex;
+    justify-content: center;
+}
+
+.tabs {
+    display: inline-flex;
+    gap: 8px;
+    padding: 6px;
+    background: var(--card);
+    border: 1px solid var(--muted);
+    border-radius: 14px;
+}
+
+.tab {
+    border: 0;
+    background: transparent;
+    color: #cfd3da;
+    padding: 8px 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transform: 0.06s ease, filter, 0.12s ease, background , 0.12s ease;;
+}
+.tab:hover {
+    background: var(--muted);
+    color: var(--accent);
+}
+.tab:active {
+    transform:  scale(0.96);
+}
+
+.main {
+    width: min(960px, 100%);
+    margin: 0px 16px 40px;
+    display: grid;
+    gap: 18px;
+}
+
+.timer {
+    background: var(--card);
+    border: 1px solid var(--muted);
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+#timeDisplay {
+    font-size: 64px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    font-variant-numeric: tabular-nums;
+}
+
+#modeHint {
+    margin-top: 6px;
+    color: var(--sub);
+    font-size: 13px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    appearance: none;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid var(--muted);
+    background: #1a1c22;
+    color: var(--text);
+    padding: 10px 35px;
+    font-weight: 700;
+    transition: transform 0.06s ease, filter, 0.12s ease, background ,0.12s ease;
+}
+.btn:hover {
+    filter: brightness(1.2);
+    font-size: 16px;
+}
+.btn:active {
+    transform: translateY(2px);
+}
+
+.invis {
+    background: transparent;
+}
+
+.sectiontitle {
+    margin: 0 0 8px 0;
+    font-size: 18px;   
+}
+
+.label {
+    display: block;
+    font-size: 13px;
+    color: var(--sub);
+    margin-bottom: 6px;
+}
+
+.input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid var(--muted);
+    background: #0e1014;
+    color: var(--text);
+    padding: 10px 12px;
+    outline: none;
+}
+
+.input:focus {
+    border-color: #3a3f50;
+    box-shadow: 0 0 0 3px rgba(120, 130, 155, 15);
+}
+
+#task, #settings {
+    background: var(--card);
+    border: 1px solid var(--muted);
+    border-radius: 16px;
+    padding: 18px;
+}
+
+#settingsform {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.settingoption {
+    display: grid;
+}
+
+.savecontainer {
+    grid-column: 1/-1;
+}
+
+.savecontainer > button {
+    display: block;
+    width: 100%;;
+}
+.savecontainer > button:hover {
+    filter: brightness(1.2);
+    font-size: 14px;
+}
