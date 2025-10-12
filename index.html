@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="styles.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>30:00 • Pomodoro</title>
     </head>
 
     <body class="app">
@@ -62,11 +62,10 @@
             <p id="summary">Task: <span id="summaryText">x</span></p>
             <p>Did you finish your task?</p>
 
-            <div>
-                <button id="buttonFinished" value="finished">Yes! Complete</button>
-
-                <button id="buttonExtend" value="extend">No, add 5 minutes and continue</button>
-                <button id="buttonBreak" value="break">No, skip to break</button>
+            <div class="dialogbtns">
+                <button id="buttonFinished" class="btn" value="finished">Yes! Complete</button>
+                <button id="buttonExtend" class="btn" value="extend">No, add 5 minutes and continue</button>
+                <button id="buttonBreak" class="btn" value="break">No, skip to break</button>
             </div>
         </dialog>
     </body>
