@@ -29,15 +29,15 @@ const storage = {
 }
 
 let durations = {
-    pomodoro: storage.durations[0] / 60,
-    shortbreak: storage.durations[1] / 60,
-    longbreak: storage.durations[2] / 60
+    pomodoro: storage.durations[0],
+    shortbreak: storage.durations[1],
+    longbreak: storage.durations[2]
 }
 console.log(durations);
 
-pomodoroDuration.value = durations.pomodoro;
-shortDuration.value = durations.shortbreak;
-longDuration.value = durations.longbreak;
+pomodoroDuration.value = durations.pomodoro / 60;
+shortDuration.value = durations.shortbreak / 60;
+longDuration.value = durations.longbreak / 60;
 
 let currentMode = storage.lastMode && ['pomodoro', 'shortbreak', 'longbreak'].includes(storage.lastMode) ? storage.lastMode : 'pomodoro';
 let running = false;
