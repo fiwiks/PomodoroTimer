@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
+        <script src="script.js" defer></script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>30:00 • Pomodoro</title>
@@ -38,17 +38,17 @@
                 <form id="settingsform">
                         <div class="settingoption">
                             <label for="pomodoro-duration" class="label">Pomodoro (minutes)</label>
-                            <input id="pomodoro-duration" class="input" name="Pomodoro Time" type="number" min="1" max="300" value="30" />
+                            <input id="pomodoro-duration" class="input" name="Pomodoro Time" type="number" value="30" />
                         </div>
 
                         <div class="settingoption">
                             <label for="short-duration" class="label">Short Break (minutes)</label>
-                            <input id="short-duration" class="input" name="Short Break Time" type="number" min="1" max="300" value="5" />
+                            <input id="short-duration" class="input" name="Short Break Time" type="number" value="5" />
                         </div>
 
                         <div class="settingoption">
                             <label for="long-duration" class="label">Long Break (minutes)</label>
-                            <input id="long-duration" class="input" name="Long Break Time" type="number" min="1" max="300" value="15" />
+                            <input id="long-duration" class="input" name="Long Break Time" type="number" value="15" />
                         </div>
 
                         <div class="savecontainer">
@@ -60,13 +60,13 @@
 
         <dialog id="taskPrompt">
             <h3 id="promptTitle">Pomodoro finished</h3>
-            <p id="summary">Task: <span id="summaryText">x</span></p>
+            <p id="summary">Task: <span id="summaryText"></span></p>
             <p>Did you finish your task?</p>
 
             <div class="dialogbtns">
                 <button id="buttonFinished" class="btn" value="finished">Yes! Complete</button>
                 <button id="buttonExtend" class="btn" value="extend">No, add 5 minutes and continue</button>
-                <button id="buttonBreak" class="btn" value="break">No, skip to break</button>
+                <button id="buttonBreak" class="btn" value="break">No, skip to short break</button>
             </div>
         </dialog>
     </body>
