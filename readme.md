@@ -1,7 +1,5 @@
 # Pomodoro Timer (HTML • CSS • JS)
-**As of 2025-10-12, finished css styles, will begin implementing js functionality.**
-
-An in-progress, minimalist, responsive Pomodoro timer
+A minimalist, responsive Pomodoro timer
 
 ## Live Demo
 https://fiwiks.github.io/PomodoroTimer/
@@ -10,6 +8,8 @@ https://fiwiks.github.io/PomodoroTimer/
 - Pomodoro / Short Break / Long Break modes
 - Start / Pause / Reset
 - Mobile-friendly layout
+- Desktop notifications
+- Local Storage persistence
 
 ## Screenshot
 ![Screenshot](PomodoroScreenshot.png)
